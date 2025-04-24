@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>eagler.lol - endercraft</title>
+  <link href="/stuff/styles2.css" rel="stylesheet" type="text/css" />
+  <meta property="og:title" content="endercraft">
+  <meta name="theme-color" content="#02c576">
+  <meta name="msapplication-TileColor" content="#02c576">
+  <meta name="description" content="an eaglercraft server.">
+  <meta property="og:description" content="an eaglercraft server.">
+  <script src="three.js"></script>
+  <script src="vanta.js"></script>
+  <script type="text/javascript" src="embed.js"></script>
+  <script type="text/javascript">
+    window.addEventListener("load", () => {
+	    new ServerEmbed(document.getElementById("embed"), "100%").ping("wss://mc.eagler.lol");
+    });
+  </script>
+</head>
+
+<body>
+<div id="therealskibiditoilet">
+    <h1>complex.lat</h1>
+    <h3>websocket upgrade faliure. (rip)</h3>
+    <h4>you have just requested the physical websocket address of endercraft.</h4> 
+    <h4>to correctly join, connect via any eaglercraftX client with the ip: <h4 id="ip">wss://mc.eagler.lol</h4></h4>
+    <br>
+    <a href="https://solocrafthtml.vercel.app/l" target="_blank">or play on the server here</a>
+    <div id="embed"></div>
+  </div>
+  <script>
+    const host = window.location.host
+    document.getElementById('ip').innerText = `wss://${host}`
+  </script>
+<div id="vanta"> </div>
+<script>
+VANTA.WAVES({
+  el: "#vanta",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x2f0061
+})
+</script>
+<script src="main.js"></script>
+</html>
